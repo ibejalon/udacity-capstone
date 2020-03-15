@@ -1,2 +1,2 @@
-# udacity-capstone
+# Udacity-Capstone
 Capstone Project

@@ -19,7 +19,7 @@ node {
 
    stage('docker build/push') {
      docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-       def app = docker.build("ibejalon/docker-nodejs-demo:${commit_id}", '.').push()
+       def app = docker.build("ibudacity2020devops/docker-nodejs-demo:${commit_id}", '.').push()
      }
    }
 

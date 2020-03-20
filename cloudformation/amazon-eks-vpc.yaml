@@ -41,16 +41,16 @@ Conditions:
     Fn::Or:
       - Fn::Equals:
         - {Ref: 'AWS::Region'}
-        - ap-south-1
+        - us-east-2
       - Fn::Equals:
         - {Ref: 'AWS::Region'}
-        - ap-northeast-2
+        - us-east-1
       - Fn::Equals:
         - {Ref: 'AWS::Region'}
-        - ca-central-1
+        - us-west-1
       - Fn::Equals:
         - {Ref: 'AWS::Region'}
-        - cn-north-1
+        - us-west-2
 
   HasMoreThan2Azs:
     Fn::Not:

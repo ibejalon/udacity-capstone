@@ -26,6 +26,7 @@ node {
   stage('Deploying') {
       echo 'Deploying to CLUSTER...'
         withAWS(credentials: 'aws-credentials', region: 'us-east-2') {
+            sh "ls -a"
             sh "kubectl get nodes"
             sh "kubectl run nodeapp --image=ibudacity2020devops/docker-nodejs-demo:${commit_id} --port=3000"
             sh "kubectl get deployments"

@@ -38,5 +38,10 @@ Ref:
 ## LIST NODES
  _kubectl get nodes_
 
-
+ ## CONFIGURING JENKINS HOST
+ _sudo mkdir -p /var/lib/jenkins/.kube_
+ _sudo cp  ~/.kube/aws-auth-cm.yaml /var/lib/jenkins/.kube_
+_cd /var/lib/jenkins/.kube/_
+_sudo chown jenkins:jenkins config_
+_sudo chmod 750 config_
 

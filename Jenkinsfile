@@ -24,8 +24,6 @@ node {
    }
 
    stage('Deploying') {
-      echo 'Deploying to CLUSTER...'
-      dir ('./') {
         withAWS(credentials: 'aws-credentials', region: 'us-east-2') {
             sh "kubectl get nodes"
             sh "kubectl run nodeapp --image=ibudacity2020devops/docker-nodejs-demo:${commit_id} --port=3000"
@@ -34,7 +32,6 @@ node {
             sh "kubectl expose deployment nodeapp --type=LoadBalancer"
             sh "kubectl describe service/nodeapp"
         }
-      }
     }
 
     stage("Cleaning up") {

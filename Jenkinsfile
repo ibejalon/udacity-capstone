@@ -25,7 +25,6 @@ node {
 
   stage('Deploying') {
       echo 'Deploying to CLUSTER...'
-       {
         withAWS(credentials: 'aws-credentials', region: 'us-east-2') {
             sh "kubectl apply -f aws-auth-cm.yaml"
             sh "kubectl get nodes"
@@ -36,7 +35,6 @@ node {
             sh "kubectl describe service/nodeapp"
             
         }
-      }
     }
 
    stage('Deploying') {

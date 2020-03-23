@@ -27,6 +27,8 @@ node {
       echo 'Deploying to CLUSTER...'
       dir ('./') {
         withAWS(credentials: 'aws-credentials', region: 'us-east-2') {
+            sh "kubectl apply -f ~/.kube/aws-auth-cm.yaml"
+            sh "kubectl get nodes"
             sh "kubectl run nodeapp --image=ibudacity2020devops/docker-nodejs-demo:${commit_id} --port=3000"
             sh "kubectl get deployments"
             sh "kubectl get pods"

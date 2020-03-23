@@ -26,5 +26,17 @@ aws eks --region us-east-2 update-kubeconfig --name ibcluster
 ## CREATE WORKER NODES
 Use the amazon-eks-nodegroup.yaml
 _./create stack-name amazon-eks-nodegroup.yaml_
+Goto Cloudformation; Enter required variables from previous script output
+
+Give the below URL as the Amazon S3 URL and click Next.
+[https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2019-02-11/amazon-eks-nodegroup.yaml]
+***same with amazon-eks-nodegroup.yaml***
+
+Ref:
+[https://medium.com/faun/create-your-first-application-on-aws-eks-kubernetes-cluster-874ee9681293]
+
+## LIST NODES
+ _kubectl get nodes_
+
 
 

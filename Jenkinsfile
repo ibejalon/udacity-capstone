@@ -36,4 +36,9 @@ node {
       }
     }
 
+    stage("Cleaning up") {
+      echo 'Cleaning up...'
+      sh "docker system prune"
+    }
+
 }

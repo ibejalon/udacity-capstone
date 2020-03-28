@@ -1,3 +1,5 @@
+#continuous Integration starts from the stage (preparation, test, lint) Continuous deployment(docker build/push, deploying)
+                                                                                                           
 node {
    def commit_id
    stage('Preparation') {

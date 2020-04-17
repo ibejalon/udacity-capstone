@@ -1,10 +1,10 @@
 # Udacity-Capstone
-This project is to Build a CI/CD pipeline for Microservices Application using rolling deployment in Jenkins by installing Blue Ocean plugs-in to complete CI/CD deployement
+This project is to Build a CI/CD pipeline for Microservices Application using rolling deployment in Jenkins by installing Blue Ocean plugs-in to complete CI/CD deployment
 
 CloudFormation was used to create the Infrastructure as Code. The following resources were created VPC, Internet Gateway, Route Table, Subnet, EC2,Security group , Jenkins-Instance, and eks-cluster
 
 
-# To Deploy
+## To Deploy
 
 Create a VPC to deploy EKS cluster with the **amazon-eks-vpc.yaml** script
 _./create.bat stack-name amazon-eks-vpc.yaml_

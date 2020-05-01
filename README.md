@@ -10,7 +10,6 @@ Create a VPC to deploy EKS cluster with the **amazon-eks-vpc.yaml** script
 _./create.bat stack-name amazon-eks-vpc.yaml_
 
 Create EKS cluster with output parameters from the VPC script
-> [https://us-east-2.console.aws.amazon.com/ecs/home?region=us-east-2#/clusters]
 
 ## ON Jenkins instance 
 Install Kubectl: [https://kubernetes.io/docs/tasks/tools/install-kubectl/]

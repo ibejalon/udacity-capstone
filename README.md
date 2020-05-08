@@ -11,7 +11,7 @@ _./create.bat stack-name amazon-eks-vpc.yaml_
 
 Create EKS cluster with output parameters from the VPC script
 
-## ON Jenkins instance 
+## On Jenkins instance 
 Install Kubectl: [https://kubernetes.io/docs/tasks/tools/install-kubectl/]
 Install AWS CLI: [https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html]
 
@@ -22,7 +22,7 @@ aws eks --region <region> update-kubeconfig --name <clusterName>
 In my context I used
 aws eks --region us-east-2 update-kubeconfig --name ibcluster
 
-## CREATE WORKER NODES
+## Create Worker Nodes
 Use the amazon-eks-nodegroup.yaml
 _./create stack-name amazon-eks-nodegroup.yaml_
 Goto Cloudformation; Enter required variables from previous script output
@@ -34,10 +34,10 @@ Give the below URL as the Amazon S3 URL and click Next.
 Ref:
 [https://medium.com/faun/create-your-first-application-on-aws-eks-kubernetes-cluster-874ee9681293]
 
-## LIST NODES
+## List Nodes
  _kubectl get nodes_
 
- ## CONFIGURING JENKINS HOST
+ ## Configuring Jenkins Host
  _sudo mkdir -p /var/lib/jenkins/.kube_
  _sudo cp  ~/.kube/aws-auth-cm.yaml /var/lib/jenkins/.kube_
 _cd /var/lib/jenkins/.kube/_
